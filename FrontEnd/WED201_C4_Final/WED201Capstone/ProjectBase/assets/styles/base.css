@@ -1,0 +1,247 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  --header-height: 3rem;
+
+  /*===== Colors =====*/
+  --first-color: #3E0E12;
+  --first-color-dark: #2F0A0D;
+  --text-color: #524748;
+  --first-color-light: #7B6F71;
+  --first-color-lighten: #FBF9F9;
+  --black: black;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 4.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*===== Margenes =====*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*===== z index =====*/
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+  
+@media screen and (min-width: 768px){
+  :root{
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color-lighten);
+  line-height: 1.6;
+  position: relative;
+}
+
+h1,h2,h3,ul,p{
+  margin: 0;
+}
+
+h2,h3{
+  font-weight: var(--font-semi-bold);
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 990px){
+  .nav-menu {
+      display:none;
+  }
+}
+.header {
+  background-color: var(--black);
+  height: var(--header-height);
+  color: var(--first-color-lighten);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--h1-font-size);
+  padding: var(--mb-4);
+}
+.home {
+  background-color: var(--black);
+  position: relative;
+  /*height: calc(100vh - var(--header-height));*/
+  padding: var(--mb-4);
+  position: relative;
+}
+
+.home-data {
+  border-left: 0.4rem solid var(--first-color-lighten);
+  padding-left: var(--mb-4);
+}
+
+.home-data>h1 {
+  font-size: var(--biggest-font-size);
+}
+
+.home-data>h2 {
+  margin-bottom: var(--mb-4);
+}
+
+.button {
+  background-color: var(--first-color-light);
+  color:var(--first-color-lighten);
+  box-sizing: border-box;
+  padding: var(--mb-2);
+  font-size: var(--h1-font-size);
+  border-radius: var(--mb-1);
+}
+
+.home-image {
+  margin-top: var(--mb-4);
+}
+.home-info {
+  position: absolute;
+  top: 70%;
+  font-size: var(--h1-font-size);
+}
+
+.about,.qualification,.portfolio,.contact-me {
+  color: var(--first-color);
+  margin: var(--mb-6);
+}
+.about {
+  text-align: center;
+}
+.text-3 {
+  display: block;
+  font-size: var(--h2-font-size);
+}
+
+.text-2 {
+  font-size: var(--h1-font-size);
+  margin-top: var(--mb-4);
+}
+
+.text-1 {
+  font-size: var(--mb-6);
+  margin-bottom: var(--mb-5);
+  text-align: center;
+}
+
+.about-image {
+  margin-top: var(--mb-4);
+}
+.about-image>img {
+  margin: auto;
+}
+
+.sub-title{
+  text-align: center;
+}
+
+.container-item {
+  box-shadow: 0px var(--mb-1) var(--mb-1) var(--first-color-light);
+  border-radius: var(--mb-3);
+  padding-bottom: var(--mb-4);
+  margin: var(--mb-6) 0;
+}
+
+.item {
+  margin: var(--mb-2) 0 var(--mb-2) var(--mb-4);
+}
+
+.item-img {
+  width: 100%;
+  border-radius: var(--mb-3) var(--mb-3) 0 0;
+}
+
+.contact-item {
+  display: block;
+  text-align: center;
+  box-shadow: 0px var(--mb-1) var(--mb-1) var(--first-color-light);
+  border-radius: var(--mb-3);
+  padding-bottom: var(--mb-4);
+  margin: var(--mb-6) 0;
+}
+
+.icon {
+  font-size: var(--biggest-font-size);
+}
+
+@media screen and (min-width: 990px){
+  .toggle {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+  .nav-menu a {
+    color: var(--first-color-lighten);
+    font-size: var(--h2-font-size);
+    margin: 0 var(--mb-3);
+  }
+
+  .about, .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--mb-2);
+  }
+
+}
+
+@media screen and (min-width: 1400px){
+  .portfolio>.container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1600px){
+  .contact-me>.container{
+    grid-template-columns: repeat(4,1fr);
+  }
+}
